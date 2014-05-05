@@ -9,7 +9,7 @@
   , "main": "index"
   , "dependencies": {
     }
-  , "devDependencies": { "should": "0.2.x"}
+  , "devDependencies": { "should": "3.3.x"}
   , "engines": { "node": "*" }
 }
 

@@ -7,7 +7,7 @@ var autocomplete = require('../lib/autocomplete'),
 
 require('./common');
 
-process.cwd().should.include.string('autocomplete');
+process.cwd().indexOf('autocomplete').should.be.above(-1);
 
 var a = autocomplete.connectAutocomplete(onReady);
 

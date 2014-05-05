@@ -8,8 +8,7 @@ var autocomplete = require('../lib/autocomplete'),
 
 require('./common');
 
-process.cwd().should.include.string('autocomplete');
-
+process.cwd().indexOf('autocomplete').should.be.above(-1);
 
 // Read the really big data file into memory
 function readLines(input, onReady) {
@@ -39,7 +38,7 @@ readLines(input, function(words) {
         var duration = new Date() - start;
         console.log('Elapsed time to search dictionary for 3 character prefix: ' + duration + 'ms');
 
-        matches.length.should.eql(663);
+        matches.length.should.be.exactly(663).and.be.a.Number
     });
 
     a.initialize(function(onReady) {
